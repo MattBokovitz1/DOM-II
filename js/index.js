@@ -8,45 +8,6 @@
 
 // // const destinationTitle = document.querySelector('h4')
 
-// // destinationTitle.addEventListener('mouseover', event => {
-// //     event.target.style.backgroundColor = 'blue'
-// // })
-
-// const buttons = document.querySelector('.btn')
-// const images = document.querySelector('.img')
-
-// function launchSignUp (event) {
-    
-// }
-// wheel.addEventListener('wheel', zoom);
-
-// function changeBackground (event){
-//     navLinks.style
-// }
-
-// navLinks.addEventListener('mouseover', event => {
-//     event.target.style.backgroundColor = 'red'
-//     document.body.style.backgroundColor = 'blue'
-// })
-
-// mouseover
-// let test = document.querySelector("header");
-// test.addEventListener("mouseover", function( event ) {   
-//     // highlight the mouseover target
-//     event.target.style.backgroundColor = "#e5e5e5";
-// })
-// //key-down
-// document.addEventListener("keydown",function(event){
-//     event.style.backgroundColor = "black";
-// });
-// const navTags = document.querySelectorAll('.nav-link');
-// const nav     = document.getElementsByClassName('nav');
-// processing
-// load 
-// const intro = document.querySelector('intro')
-// window.addEventListener('load',function(){
-//     intro.style.backgroundColor = "black"
-// }); //processing
 
 const h1     = document.querySelector('h1');
 const header = document.querySelector('header');
@@ -77,7 +38,7 @@ window.addEventListener('load', function(){
 });
 
 
-//sroll
+//scroll
 window.addEventListener('scroll',function(){
     header.style.backgroundColor = "aquamarine";
 })
@@ -97,7 +58,7 @@ password.addEventListener('focus', (event) => {
 
 password.addEventListener('blur', (event) => {
     event.target.style.background = '';    
-  });
+});
 
 
 //online and offline events
@@ -105,16 +66,16 @@ password.addEventListener('blur', (event) => {
     body.style.backgroundColor = "grey";
   }
 
-  window.addEventListener('online',function(){
+window.addEventListener('online',function(){
     body.style.backgroundColor = "orange";
 }); 
 
- window.addEventListener('offline', function(){
+window.addEventListener('offline', function(){
         body.style.backgroundColor = "turquoise";
         body.style.color = "white";      
   });
 
-  document.querySelector("nav").addEventListener("click", function(event) {
+document.querySelector("nav").addEventListener("click", function(event) {
     event.preventDefault();
 }, false);
 
