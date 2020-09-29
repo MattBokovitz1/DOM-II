@@ -104,5 +104,6 @@ function eventPropagation (e){
 navTags.forEach(navTag => navTag.addEventListener('click',eventPropagation,false));
 
 //Stretch
+import {gsap} from 'gsap'; 
 gsap.from(".img-fluid", {rotation: 30, x: 120, duration: 1});
 gsap.from(".hero-img", {rotation: 20, x: 120, scale: 2, duration: 1});
