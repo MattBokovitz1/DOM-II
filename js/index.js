@@ -55,13 +55,13 @@ const body   = document.querySelector('body')
 
 //mouseover
 header.addEventListener('mouseover', function(){
-    header.style.backgroundColor = "#e5e5e5"
+    header.style.backgroundColor = "red"
 });
 
 
 //wheeldown 
 document.addEventListener('wheel', function(){
-    header.style.backgroundColor = "#c6dabf"
+    header.style.backgroundColor = "yellow"
 });
 
 
