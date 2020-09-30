@@ -12,46 +12,53 @@
 const h1     = document.querySelector('h1');
 const header = document.querySelector('header');
 const body   = document.querySelector('body')
-
-
-//mouseover
-header.addEventListener('mouseover', function(){
-    header.style.backgroundColor = "red"
-});
-
+const h2     = document.querySelector('h2');
+const h4     = document.querySelector('h4');
 
 //wheeldown 
 document.addEventListener('wheel', function(){
-    header.style.backgroundColor = "yellow"
+    body.style.backgroundColor = "yellow"
+    h2.style.backgroundColor = "lavender"
 });
 
-
-//keydown
-document.addEventListener('keydown', function(){
-    header.style.backgroundColor = "lavender"
+//mouseover
+h2.addEventListener('mouseover', function(){
+    h2.style.color = "red"
+    body.style.backgroundColor = "aquamarine"
 });
 
-
-window.addEventListener('load', function(){
-    header.style.backgroundColor = "grey";
-    h1.style.color = "blue"
+header.addEventListener('mouseover', function(){
+    header.style.backgroundColor = "orange"
+    body.style.backgroundColor = "grey"
 });
-
-
-//scroll
-window.addEventListener('scroll',function(){
-    header.style.backgroundColor = "aquamarine";
-})
-
 
 // mouseleave
 header.addEventListener('mouseleave',function(){
     header.style.backgroundColor = "yellow";
-})
+});
 
-//focus
+//keydown
+document.addEventListener('keydown', function(){
+    header.style.backgroundColor = "lavender"
+    body.style.backgroundColor = "grey"
+
+});
+
+header.addEventListener('load', function(){
+    header.style.backgroundColor = "grey";
+});
+
+h1.addEventListener('load', function(){
+    h1.style.color = "blue"
+});
+
+//scroll
+window.addEventListener('scroll',function(){
+    header.style.backgroundColor = "aquamarine";
+});
+
+//password bar
 const password = document.querySelector('input[type="password"]');
-
 password.addEventListener('focus', (event) => {
   event.target.style.background = 'black';    
 });
@@ -60,19 +67,20 @@ password.addEventListener('blur', (event) => {
     event.target.style.background = '';    
 });
 
-
 //online and offline events
   if (navigator.onLine){
     body.style.backgroundColor = "grey";
   }
 
-window.addEventListener('online',function(){
+body.addEventListener('online',function(){
     body.style.backgroundColor = "orange";
+    header.style.backgroundColor = "blue";
 }); 
 
-window.addEventListener('offline', function(){
+body.addEventListener('offline', function(){
         body.style.backgroundColor = "turquoise";
-        body.style.color = "white";      
+        body.style.color = "white";
+        header.style.backgroundColor = "blue";      
   });
 
 document.querySelector("nav").addEventListener("click", function(event) {
@@ -94,7 +102,7 @@ header.addEventListener('click',function(){
     header.style.backgroundColor="lavender";
 })
 navTags.forEach(navTag => navTag.addEventListener('click',function(e){
-    header.style.backgroundColor ="aquamarine";
+    navTags.style.backgroundColor ="aquamarine";
     e.stopPropagation();
 }))
 function eventPropagation (e){ 
